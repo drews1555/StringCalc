@@ -59,7 +59,9 @@ func main() {
 		osh10(d)
 		e := strings.Contains(c, d)
 		if e == true {
-			result := c[:len(c)-(len(d))]
+			g := strings.Split(c, d)
+			result := g[0] + g[1]
+			//result := c[:len(c)-(len(d))]
 			fmt.Println("\"" + result + "\"")
 		} else {
 			fmt.Println("\"" + c + "\"")
